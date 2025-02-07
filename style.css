@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+    --lightblue: #b2ebff;
+}
+
+
+
+
+/* built-in classes */
+.inter-regular {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-medium {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* /built-in classes */
+
+/* Main-design */
+body {
+    background-color: black !important;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+}
+
+main {
+    width: 325px;
+    height: 580px;
+    background-color: var(--Grey-800);
+    padding: 1.25em 1.25em 1.563em 1.25em;
+    border-radius: 10px;
+}
+
+@media screen and (min-width : 601px) {
+
+    main {
+        width: 390px;
+        height: 610px;
+        padding: 2.5em;
+    }
+}
+
+/* /Main-design */
+
+/* profile-info */
+
+.profile-info {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+img {
+    width: 230px;
+    clip-path: circle(26%);
+    object-fit: cover;
+    margin-bottom: 0.5em;
+    object-position: top;
+    height: 100px;
+
+}
+
+h1 {
+    color: white !important;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 1.375rem) !important;
+}
+
+h5 {
+    color: var(--lightblue) !important;
+    font-size: clamp(0.84rem, 0.1rem + 0.01vw, 0.11rem) !important;
+    margin-bottom: 1.3rem !important;
+}
+
+p {
+    color: white;
+    font-size: clamp(calc(1.13rem - 3.5px), 1vw + 0.38rem, calc(1rem - 2.5px));
+    margin-bottom: 1.8em;
+}
+
+/* /profile-info */
+
+/* social-buttons */
+section.social-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: center;
+    height: calc(100% - 205px);
+}
+
+section.social-buttons a {
+    background-color: var(--Grey-700);
+    padding: 12px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: all 200ms;
+}
+
+section.social-buttons a:hover,
+section.social-buttons a:active section.social-buttons a:focus {
+    background-color: var(--lightblue);
+    color: black;
+}
+
+/* /social-buttons */
